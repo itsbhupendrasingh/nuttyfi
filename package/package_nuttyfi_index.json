@@ -3,16 +3,16 @@
       {
          "name": "nuttyfi",
          "maintainer": "SME community",
-         "websiteURL": "https://github.com/Rahulpanwar8/nuttyfi",
+         "websiteURL": "https://github.com/itsbhupendrasingh/nuttyfi",
          "email": "schematicslab@gmail.com",
          "help": {
-            "online": "https://github.com/Rahulpanwar8/nuttyfi"
+            "online": "https://github.com/itsbhupendrasingh/nuttyfi"
          },
          "platforms": [
             {
                "category": "NuttyFi2.0",
                "name": "NuttyFi2.0 Framework",
-               "url": "https://github.com/Rahulpanwar8/nuttyfi/releases/download/v1.0.0/nuttyfi-1.0.0-dev.zip",
+               "url": "https://github.com/itsbhupendrasingh/Nuttyfi/releases/download/v.1.0.0/nuttyfi-1.0.0-dev.zip",
                "version": "1.0.0-dev",
                "architecture": "esp8266",
                "archiveFileName": "nuttyfi-1.0.0-dev.zip",
@@ -46,7 +46,7 @@
                   }
                ],
                "help": {
-                  "online": "https://github.com/Rahulpanwar8/nuttyfi"
+                  "online": "https://github.com/itsbhupendrasingh/nuttyfi"
                }
             }
          ],
