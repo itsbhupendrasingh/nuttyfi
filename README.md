@@ -11,13 +11,6 @@ Make your **NuttyFi 2.0** boards first‑class citizens in the Arduino IDE via B
 
 > 2. **Tools → Board → Boards Manager…** → search **“NuttyFi”** → **Install**.
 > 3. Select **Tools → Board → NuttyFi 2.0 (ESP‑12E/12F)** and you’re set.
-That ` ```text ... ``` ` block triggers GitHub’s **copy** button.  
-If you want to show two URLs on one line with a copy button:
-
-```markdown
-```text
-https://raw.githubusercontent.com/itsbhupendrasingh/Nuttyfi/main/package/package_nuttyfi_index.json, http://arduino.esp8266.com/stable/package_esp8266com_index.json
-
 
 ---
 
