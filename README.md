@@ -1,136 +1,222 @@
-Arduino core for ESP8266 WiFi chip
-===========================================
+# NuttyFi 2.0 — Arduino Boards Package for ESP8266 (SME Dehradun)
 
-# Quick links
+Make your **NuttyFi 2.0** boards first‑class citizens in the Arduino IDE via Boards Manager.
 
-- [Latest release documentation](https://arduino-esp8266.readthedocs.io/en/3.1.2/)
-- [Current "git version" documentation](https://arduino-esp8266.readthedocs.io/en/latest/)
-- [Install git version](https://arduino-esp8266.readthedocs.io/en/latest/installing.html#using-git-version) ([sources](doc/installing.rst#using-git-version))
+> **TL;DR (Install in Arduino IDE 2.x)**
+>
+> 1. Open **File → Preferences → Additional Boards Manager URLs** and add:
+>    `https://raw.githubusercontent.com/itsbhupendrasingh/Nuttyfi/main/package/package_nuttyfi_index.json`
+> 2. **Tools → Board → Boards Manager…** → search **“NuttyFi”** → **Install**.
+> 3. Select **Tools → Board → NuttyFi 2.0 (ESP‑12E/12F)** and you’re set.
 
-# Arduino on ESP8266
+---
 
-This project brings support for the ESP8266 chip to the Arduino environment. It lets you write sketches, using familiar Arduino functions and libraries, and run them directly on ESP8266, with no external microcontroller required.
+## Quick links
 
-ESP8266 Arduino core comes with libraries to communicate over WiFi using TCP and UDP, set up HTTP, mDNS, SSDP, and DNS servers, do OTA updates, use a file system in flash memory, and work with SD cards, servos, SPI and I2C peripherals.
+* **Boards Manager URL:** `https://raw.githubusercontent.com/itsbhupendrasingh/Nuttyfi/main/package/package_nuttyfi_index.json`
+* **Latest Release:** <ADD_GITHUB_RELEASE_LINK>
+* **Issue Tracker (Support):** [https://github.com/itsbhupendrasingh/Nuttyfi/issues](https://github.com/itsbhupendrasingh/Nuttyfi/issues)
+* **Documentation (this repo):** [/docs](./docs) *(optional, add if you create a docs folder)*
+* **Examples:** [/examples](./examples)
 
-# Contents
-- Installing options:
-  - [Using Boards Manager](#installing-with-boards-manager)
-  - [Using git version](#using-git-version)
-  - [Using PlatformIO](#using-platformio)
-  - [Building with make](#building-with-make)
-- [Documentation](#documentation)
-- [Issues and support](#issues-and-support)
-- [Contributing](#contributing)  
-- [License and credits](#license-and-credits)   
+> **Note:** NuttyFi 2.0 is based on the ESP8266 toolchain and leverages Arduino‑ESP8266 under the hood, but this package provides a **clean, board‑focused install** with NuttyFi‑specific defaults, variants, and examples.
 
-### Installing with Boards Manager
+---
 
-Starting with 1.6.4, Arduino allows installation of third-party platform packages using Boards Manager. We have packages available for Windows, Mac OS, and Linux (32 and 64 bit).
+## What this package includes
 
-- [Download and install Arduino IDE 1.x or 2.x](https://www.arduino.cc/en/software)
-- Start Arduino and open the Preferences window
-- Enter `https://arduino.esp8266.com/stable/package_esp8266com_index.json` into the *File>Preferences>Additional Boards Manager URLs* field of the Arduino IDE. You can add multiple URLs, separating them with commas.
-- Open Boards Manager from Tools > Board menu and install *esp8266* platform (and don't forget to select your ESP8266 board from Tools > Board menu after installation).
+* **NuttyFi 2.0 board definitions** (variants, uploader settings, flash layouts)
+* **Pre‑tuned defaults** for stable Wi‑Fi, OTA, and filesystem (LittleFS) on NuttyFi 2.0
+* **Curated examples** for typical NuttyFi use: Wi‑Fi AP+STA, OTA, HTTP server, MQTT, WebSocket, PWM/Servo, I²C/SPI buses, microSD (if fitted)
+* **Pin aliases** that match the NuttyFi 2.0 silkscreen and documentation
 
-#### Latest release [![Latest release](https://img.shields.io/github/release/esp8266/Arduino.svg)](https://github.com/esp8266/Arduino/releases/latest/)
-Boards manager link: `https://arduino.esp8266.com/stable/package_esp8266com_index.json`
+If you need the upstream ESP8266 platform docs, see: [https://arduino-esp8266.readthedocs.io/](https://arduino-esp8266.readthedocs.io/) (used here as the underlying core).
 
-Documentation: [https://arduino-esp8266.readthedocs.io/en/3.1.2/](https://arduino-esp8266.readthedocs.io/en/3.1.2/)
+---
 
-### Using git version
+## Supported boards
 
-Also known as latest git or master branch.
+* **NuttyFi 2.0 (ESP‑12E/ESP‑12F)** — *default* variant: `nuttyfi_2`
+* *(Add more models/variants here if applicable)*
 
-- When using [Arduino IDE](https://www.arduino.cc/en/software), follow [our instructions here](https://arduino-esp8266.readthedocs.io/en/latest/installing.html#using-git-version).
-- When using [PlatformIO](https://platformio.org/install), refer to [platformio/espressif8266 platform documentation](https://docs.platformio.org/en/stable/platforms/espressif8266.html#using-arduino-framework-with-staging-version).
+---
 
-### Using PlatformIO
+## Pinout (NuttyFi 2.0 default)
 
-[PlatformIO](https://platformio.org?utm_source=arduino-esp8266) is an open source ecosystem for IoT
-development with a cross-platform build system, a library manager, and full support
-for Espressif (ESP8266) development. It works on the following popular host operating systems: macOS, Windows,
-Linux 32/64, and Linux ARM (like Raspberry Pi, BeagleBone, CubieBoard).
+> **Verify & edit** these to match your exact NuttyFi 2.0 schematic/silkscreen before publishing.
 
-- [What is PlatformIO?](https://docs.platformio.org/en/latest/what-is-platformio.html?utm_source=arduino-esp8266)
-- [PlatformIO IDE](https://platformio.org/platformio-ide?utm_source=arduino-esp8266)
-- [PlatformIO Core](https://docs.platformio.org/en/latest/core.html?utm_source=arduino-esp8266) (command line tool)
-- [Advanced usage](https://docs.platformio.org/en/latest/platforms/espressif8266.html?utm_source=arduino-esp8266) -
-  custom settings, uploading to SPIFFS, Over-the-Air (OTA), staging version
-- [Integration with Cloud and Standalone IDEs](https://docs.platformio.org/en/latest/ide.html?utm_source=arduino-esp8266) -
-  Cloud9, Codeanywhere, Eclipse Che (Codenvy), Atom, CLion, Eclipse, Emacs, NetBeans, Qt Creator, Sublime Text, VIM, Visual Studio, and VSCode
-- [Project Examples](https://docs.platformio.org/en/latest/platforms/espressif8266.html?utm_source=arduino-esp8266#examples)
+| Label | ESP8266 GPIO | Notes                                            |
+| ----: | :----------: | ------------------------------------------------ |
+|    D0 |    GPIO16    | Deep‑sleep wake; no PWM/I²C; boot strapping safe |
+|    D1 |     GPIO5    | I²C SCL (recommended)                            |
+|    D2 |     GPIO4    | I²C SDA (recommended)                            |
+|    D3 |     GPIO0    | **BOOT strap**; keep HIGH at boot                |
+|    D4 |     GPIO2    | Built‑in LED on some modules; **BOOT strap**     |
+|    D5 |    GPIO14    | SPI SCK                                          |
+|    D6 |    GPIO12    | SPI MISO                                         |
+|    D7 |    GPIO13    | SPI MOSI                                         |
+|    D8 |    GPIO15    | **BOOT strap**; must be LOW at boot (pull‑down)  |
+|    RX |  GPIO3 (RX)  | UART0 RX                                         |
+|    TX |  GPIO1 (TX)  | UART0 TX                                         |
+|    A0 |     ADC0     | 0–1.0V (or 0–3.3V if board includes divider)     |
 
-### Building with make
+> Boot‑strapping pins **GPIO0, GPIO2, GPIO15** affect boot mode—avoid pulling them to the wrong levels at reset.
 
-[makeEspArduino](https://github.com/plerup/makeEspArduino) is a generic makefile for any ESP8266 Arduino project.
-Using make instead of the Arduino IDE makes it easier to do automated and production builds.
+---
 
-### Documentation
+## Flash layouts
 
-Documentation for latest development version: https://arduino-esp8266.readthedocs.io/en/latest/
+Default flash layout uses **4M (1M SPIFFS/LittleFS)**. You can choose others in **Tools → Flash Size**:
 
-### Issues and support ###
+* **4M (1M LittleFS)** *(default)*
+* **4M (2M LittleFS)**
+* **1M (64K LittleFS)** *(for minimal builds)*
 
-[ESP8266 Community Forum](https://www.esp8266.com/u/arduinoanswers) is a well-established community for questions and answers about Arduino for ESP8266. Stackoverflow is also an alternative. If you need help, have a "How do I..." type question, have a problem with a 3rd party library not hosted in this repo, or just want to discuss how to approach a problem, please ask there.
+Adjust these in `boards.txt` if your production design differs.
 
-If you find the forum useful, please consider supporting it with a donation. <br />
-[![Donate](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://www.paypal.com/webscr?cmd=_s-xclick&hosted_button_id=4M56YCWV6PX66)
+---
 
-If you encounter an issue which you think is a bug in the ESP8266 Arduino Core or the associated libraries, or if you want to propose an enhancement, you are welcome to submit it here on Github: https://github.com/esp8266/Arduino/issues.
+## Getting started
 
-Please provide as much context as possible, as well as the information requested in the issue template:
+1. **Install** the Boards package (see TL;DR above).
+2. Open **File → Examples → NuttyFi 2.0** and choose **01_Basics/01_Blink** to verify your toolchain & upload.
+3. Try **04_Network/HTTPServer_Basic** and connect to the printed IP address.
 
-- ESP8266 Arduino core version which you are using (you can check it in Boards Manager)
-- your sketch code; please wrap it into a code block, see [Github markdown manual](https://help.github.com/articles/basic-writing-and-formatting-syntax/#quoting-code)
-- when encountering an issue that happens at run time, attach the serial output. Wrap it into a code block, just like the code.
-- for issues that happen at compile time, enable verbose compiler output in the IDE preferences, and attach that output (also inside a code block)
-- ESP8266 development board model
-- IDE settings (board choice, flash size)
-- etc
+### Minimal blink example
 
-### Contributing
+```cpp
+#include <Arduino.h>
 
-For minor fixes of code and documentation, please go ahead and submit a pull request.  A gentle introduction to the process can be found [here](https://www.freecodecamp.org/news/a-simple-git-guide-and-cheat-sheet-for-open-source-contributors/).
+#ifndef LED_BUILTIN
+#define LED_BUILTIN 2 // adjust if your LED is on GPIO2
+#endif
 
-Check out the list of issues that are easy to fix — [easy issues pending](https://github.com/esp8266/Arduino/issues?q=is%3Aopen+is%3Aissue+label%3A%22level%3A+easy%22). Working on them is a great way to move the project forward.
+void setup(){
+  pinMode(LED_BUILTIN, OUTPUT);
+}
 
-Larger changes (rewriting parts of existing code from scratch, adding new functions to the core, adding new libraries) should generally be discussed by opening an issue first. PRs with such changes require testing and approval.
+void loop(){
+  digitalWrite(LED_BUILTIN, !digitalRead(LED_BUILTIN));
+  delay(500);
+}
+```
 
-Feature branches with lots of small commits (especially titled "oops", "fix typo", "forgot to add file", etc.) should be squashed before opening a pull request. At the same time, please refrain from putting multiple unrelated changes into a single pull request.
+---
 
-### License and credits ###
+## Filesystem (LittleFS)
 
-Arduino IDE is developed and maintained by the Arduino team. The IDE is licensed under GPL.
+* Use **LittleFS** for storing web assets, configs, and logs.
+* Install the **LittleFS Data Upload** tool (ESP8266 LittleFS plugin) if you need to upload a `/data` folder.
+* Example: **05_FS/LittleFS_WebUI** shows serving a simple web UI from flash.
 
-ESP8266 core includes an xtensa gcc toolchain, which is also under GPL.
+> If you ship a custom uploader or pre‑compile assets, document it here.
 
-Esptool.py was initially created by Fredrik Ahlberg (@themadinventor, @kongo), and is currently maintained by Angus Gratton (@projectgus) under GPL 2.0 license.
+---
 
-[Espressif's NONOS SDK](https://github.com/espressif/ESP8266_NONOS_SDK) included in this build is under Espressif MIT License.
+## OTA (Over‑the‑Air updates)
 
-ESP8266 core files are licensed under LGPL.
+* Enable **Basic OTA** example: **06_OTA/BasicOTA**.
+* After first serial upload, subsequent uploads can be done over the network from **Port: network‑xxxx** in the IDE.
+* For production, set an OTA password (see example).
 
-[SPI Flash File System (SPIFFS)](https://github.com/pellepl/spiffs) written by Peter Andersson is used in this project. It is distributed under the MIT license.
+---
 
-[umm_malloc](https://github.com/rhempel/umm_malloc) memory management library written by Ralph Hempel is used in this project. It is distributed under the MIT license.
+## Wi‑Fi modes (STA/AP)
 
-[SoftwareSerial](https://github.com/plerup/espsoftwareserial) library and examples written by Peter Lerup. Distributed under LGPL 2.1.
+* **Station (STA)**: connect to existing Wi‑Fi.
+* **Access Point (AP)**: NuttyFi creates its own SSID (default **IoT Gateway** or your brand — update the example).
+* **AP+STA**: both at once; useful for provisioning.
 
-[BearSSL](https://bearssl.org) library written by Thomas Pornin, built from https://github.com/earlephilhower/bearssl-esp8266, is used in this project.  It is distributed under the [MIT License](https://bearssl.org/#legal-details).
+Examples under **04_Network/** demonstrate all three modes.
 
-[LittleFS](https://github.com/ARMmbed/littlefs) library written by ARM Limited and released under the [BSD 3-clause license](https://github.com/ARMmbed/littlefs/blob/master/LICENSE.md).
+---
 
-[uzlib](https://github.com/pfalcon/uzlib) library written and (c) 2014-2018 Paul Sokolovsky, licensed under the ZLib license (https://www.zlib.net/zlib_license.html). uzlib is based on: tinf library by Joergen Ibsen (Deflate decompression); Deflate Static Huffman tree routines by Simon Tatham; LZ77 compressor by Paul Sokolovsky; with library integrated and maintained by Paul Sokolovsky.
+## Upload settings (recommended)
 
-### Other useful links ###
+* **Upload speed:** 921600 (fallback 115200 on flaky cables)
+* **Flash mode:** DIO
+* **Flash freq:** 40 MHz
+* **CPU freq:** 80 MHz (use 160 MHz only if you need the extra performance)
 
-[Toolchain repo](https://github.com/earlephilhower/esp-quick-toolchain)
+These defaults are set in `boards.txt` for the NuttyFi 2.0 variant; adjust to match your hardware validation.
 
-[Lwip link layer repo](https://github.com/d-a-v/esp82xx-nonos-linklayer)
+---
 
-[SoftwareSerial repo](https://github.com/plerup/espsoftwareserial)
+## Troubleshooting
 
-[Serial Monitor Arduino IDE plugin](https://github.com/mytrain/arduino-esp8266-serial-plugin) Original discussion [here](https://github.com/esp8266/Arduino/issues/1360), quick download [there](http://mytrain.fr/cms//images/mytrain/private/ESP8266SM.v3.zip).
+* **Board not detected / timeout**: try lower upload speed, press reset during sync, or use a known‑good USB‑UART.
+* **Boot loops**: check boot straps (GPIO0, GPIO2, GPIO15), power supply stability, and EN/RESET lines.
+* **Wi‑Fi unstable**: use a solid 3.3V regulator, short ground returns, and add bulk/tantalum + 0.1µF decoupling.
+* **LittleFS errors**: ensure flash layout matches what you selected under **Tools → Flash Size**.
 
-[FTP Client/Server Library](https://github.com/dplasa/FTPClientServer) 
+Create new issues with logs and exact steps here: [https://github.com/itsbhupendrasingh/Nuttyfi/issues](https://github.com/itsbhupendrasingh/Nuttyfi/issues)
+
+---
+
+## Directory layout (for maintainers)
+
+```
+package/
+  package_nuttyfi_index.json   # Boards Manager index (edit version, url, size, checksum)
+platforms/
+  esp8266/
+    2.0.0/
+      boards.txt
+      platform.txt
+      variants/
+        nuttyfi_2/
+          pins_arduino.h
+examples/
+  01_Basics/...
+  04_Network/...
+  05_FS/...
+  06_OTA/...
+```
+
+* Each release ships a **tar.bz2** archive for the `platforms/esp8266/<version>/` content.
+* Update **`url`**, **`archiveFileName`**, **`size`**, **`checksum`** (SHA‑256) in `package/package_nuttyfi_index.json` for every release.
+
+---
+
+## Versioning & releases
+
+* Use semantic tags like **2.0.0**, **2.0.1**, etc.
+* Attach the `nuttyfi-esp8266-<ver>.tar.bz2` archive to the corresponding GitHub Release.
+* Document changes in **CHANGELOG.md** (add breaking changes, new pins, flash layouts, etc.).
+
+---
+
+## Contributing
+
+PRs and issues are welcome. Please include:
+
+* **NuttyFi package version** (Boards Manager)
+* **Board model/variant**
+* **Complete sketch** (minimal repro)
+* **Serial logs** (for runtime issues) or **Verbose compile output** (for build issues)
+* **Upload settings** (flash size/mode, CPU freq)
+
+---
+
+## License
+
+* **Package & variant files:** <CHOOSE: MIT/BSD‑3/Apache‑2.0> (add LICENSE file)
+* **Upstream Arduino‑ESP8266 core:** licensed per its repository; see their LICENSE.
+
+---
+
+## Credits
+
+* **Schematics Microelectronics (SME Dehradun)** — NuttyFi hardware & Arduino package
+* **ESP8266 Arduino Core maintainers** — underlying platform & toolchain
+
+---
+
+### Checklist before publishing
+
+* [ ] Verify **pinout table** matches NuttyFi 2.0 PCB/silkscreen
+* [ ] Confirm **LED_BUILTIN** mapping in `pins_arduino.h`
+* [ ] Validate **default flash layout** in `boards.txt`
+* [ ] Build & upload **examples** on real hardware
+* [ ] Create **Release** with the platform tarball + update JSON (`size`, `checksum`)
+* [ ] Fill in placeholders: release link, license, docs links, OTA defaults
