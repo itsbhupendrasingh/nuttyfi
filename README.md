@@ -183,7 +183,7 @@ examples/
 
 * Use semantic tags like **2.0.0**, **2.0.1**, etc.
 * Attach the `nuttyfi-esp8266-<ver>.tar.bz2` archive to the corresponding GitHub Release.
-* Document changes in **CHANGELOG.md** (add breaking changes, new pins, flash layouts, etc.).
+* Document changes in **CHANGELOG.md** 
 
 ---
 
