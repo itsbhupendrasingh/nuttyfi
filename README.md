@@ -3,11 +3,21 @@
 Make your **NuttyFi 2.0** boards first‑class citizens in the Arduino IDE via Boards Manager.
 
 > **TL;DR (Install in Arduino IDE 2.x)**
->
-> 1. Open **File → Preferences → Additional Boards Manager URLs** and add:
->    `https://raw.githubusercontent.com/itsbhupendrasingh/Nuttyfi/main/package/package_nuttyfi_index.json`
+
+1. Open **File → Preferences → Additional Boards Manager URLs** and add:
+
+   ```text
+   https://raw.githubusercontent.com/itsbhupendrasingh/Nuttyfi/main/package/package_nuttyfi_index.json
+
 > 2. **Tools → Board → Boards Manager…** → search **“NuttyFi”** → **Install**.
 > 3. Select **Tools → Board → NuttyFi 2.0 (ESP‑12E/12F)** and you’re set.
+That ` ```text ... ``` ` block triggers GitHub’s **copy** button.  
+If you want to show two URLs on one line with a copy button:
+
+```markdown
+```text
+https://raw.githubusercontent.com/itsbhupendrasingh/Nuttyfi/main/package/package_nuttyfi_index.json, http://arduino.esp8266.com/stable/package_esp8266com_index.json
+
 
 ---
 
