@@ -16,7 +16,8 @@ Make your **NuttyFi 2.0** boards first‑class citizens in the Arduino IDE via B
 
 ## Quick links
 
-* **Boards Manager URL:** ```text
+* **Boards Manager URL:**
+  ```text
    https://raw.githubusercontent.com/itsbhupendrasingh/Nuttyfi/main/package/package_nuttyfi_index.json
 * **Issue Tracker (Support):** [https://github.com/itsbhupendrasingh/Nuttyfi/issues](https://github.com/itsbhupendrasingh/Nuttyfi/issues)
 
