@@ -35,7 +35,6 @@ If you need the upstream ESP8266 platform docs, see: [https://arduino-esp8266.re
 ## Supported boards
 
 * **NuttyFi 2.0 (ESP‑12E/ESP‑12F)** — *default* variant: `nuttyfi_2`
-* *(Add more models/variants here if applicable)*
 
 ---
 
@@ -86,7 +85,7 @@ Adjust these in `boards.txt` if your production design differs.
 #include <Arduino.h>
 
 #ifndef LED_BUILTIN
-#define LED_BUILTIN 2 // adjust if your LED is on GPIO2
+#define LED_BUILTIN D4 // adjust if your LED is on GPIO2
 #endif
 
 void setup(){
