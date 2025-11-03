@@ -17,7 +17,6 @@ Make your **NuttyFi 2.0** boards first‑class citizens in the Arduino IDE via B
 ## Quick links
 
 * **Boards Manager URL:** `https://raw.githubusercontent.com/itsbhupendrasingh/Nuttyfi/main/package/package_nuttyfi_index.json`
-* **Latest Release:** <ADD_GITHUB_RELEASE_LINK>
 * **Issue Tracker (Support):** [https://github.com/itsbhupendrasingh/Nuttyfi/issues](https://github.com/itsbhupendrasingh/Nuttyfi/issues)
 
 > **Note:** NuttyFi 2.0 is based on the ESP8266 toolchain and leverages Arduino‑ESP8266 under the hood, but this package provides a **clean, board‑focused install** with NuttyFi‑specific defaults, variants, and examples.
