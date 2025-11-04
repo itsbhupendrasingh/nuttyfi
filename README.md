@@ -212,12 +212,3 @@ PRs and issues are welcome. Please include:
 * **ESP8266 Arduino Core maintainers** — underlying platform & toolchain
 
 ---
-
-### Checklist before publishing
-
-* [ ] Verify **pinout table** matches NuttyFi 2.0 PCB/silkscreen
-* [ ] Confirm **LED_BUILTIN** mapping in `pins_arduino.h`
-* [ ] Validate **default flash layout** in `boards.txt`
-* [ ] Build & upload **examples** on real hardware
-* [ ] Create **Release** with the platform tarball + update JSON (`size`, `checksum`)
-* [ ] Fill in placeholders: release link, license, docs links, OTA defaults
