@@ -2,7 +2,7 @@
 
 Make your **NuttyFi 2.0** boards first‑class citizens in the Arduino IDE via Boards Manager.
 
-## TL;DR (Install in Arduino IDE 2.x)
+## Install in Arduino IDE 2.x
 
 1. Open **File → Preferences → Additional Boards Manager URLs** and add:
 
@@ -36,9 +36,8 @@ If you need the upstream ESP8266 platform docs, see: [https://arduino-esp8266.re
 
 ---
 
-## Supported boards
-
-* **NuttyFi 2.0 (ESP‑12E/ESP‑12F)** — *default* variant: `nuttyfi_2`
+- **[NuttyFi 2.0 (ESP-12E/ESP-12F)](https://www.nuttyengineer.com/product/nuttyfi-v2/)** — *default* variant: `nuttyfi_2`
+  
 
 ---
 
@@ -78,10 +77,6 @@ Adjust these in `boards.txt` if your production design differs.
 ---
 
 ## Getting started
-
-1. **Install** the Boards package (see TL;DR above).
-2. Open **File → Examples → NuttyFi 2.0** and choose **01_Basics/01_Blink** to verify your toolchain & upload.
-3. Try **04_Network/HTTPServer_Basic** and connect to the printed IP address.
 
 ### Minimal blink example
 
@@ -134,7 +129,7 @@ Examples under **04_Network/** demonstrate all three modes.
 
 ## Upload settings (recommended)
 
-* **Upload speed:** 921600 (fallback 115200 on flaky cables)
+* **Upload speed:** 115200 (fallback 115200 on flaky cables)
 * **Flash mode:** DIO
 * **Flash freq:** 40 MHz
 * **CPU freq:** 80 MHz (use 160 MHz only if you need the extra performance)
@@ -174,17 +169,6 @@ examples/
   06_OTA/...
 ```
 
-* Each release ships a **tar.bz2** archive for the `platforms/esp8266/<version>/` content.
-* Update **`url`**, **`archiveFileName`**, **`size`**, **`checksum`** (SHA‑256) in `package/package_nuttyfi_index.json` for every release.
-
----
-
-## Versioning & releases
-
-* Use semantic tags like **2.0.0**, **2.0.1**, etc.
-* Attach the `nuttyfi-esp8266-<ver>.tar.bz2` archive to the corresponding GitHub Release.
-* Document changes in **CHANGELOG.md** 
-
 ---
 
 ## Contributing
@@ -201,14 +185,16 @@ PRs and issues are welcome. Please include:
 
 ## License
 
-* **Package & variant files:** <CHOOSE: MIT/BSD‑3/Apache‑2.0> (add LICENSE file)
-* **Upstream Arduino‑ESP8266 core:** licensed per its repository; see their LICENSE.
+- **Package & variant files:** [MIT License](https://github.com/itsbhupendrasingh/Nuttyfi/blob/main/LICENSE) *(recommended; replace this link if you choose BSD-3/Apache-2.0)*
+- **Upstream Arduino-ESP8266 core:** per upstream repo’s license — see [esp8266/Arduino LICENSE](https://github.com/esp8266/Arduino/blob/master/LICENSE).
 
 ---
 
 ## Credits
 
-* **Schematics Microelectronics (SME Dehradun)** — NuttyFi hardware & Arduino package
-* **ESP8266 Arduino Core maintainers** — underlying platform & toolchain
+- **[Schematics Microelectronics (SME Dehradun)](https://www.smedehradun.com/)** — NuttyFi hardware & Arduino package  
+- **[NuttyFi 2.0](https://www.nuttyengineer.com/product/nuttyfi-v2/)** — product page & board details  
+- **[ESP8266 Arduino Core maintainers](https://github.com/esp8266/Arduino)** — underlying platform & toolchain
+
 
 ---
