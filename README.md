@@ -2,7 +2,6 @@
 
 Make your **NuttyFi 2.0** boards first‑class citizens in the Arduino IDE via Boards Manager.
 
-
 ## TL;DR (Install in Arduino IDE 2.x)
 
 1. Open **File → Preferences → Additional Boards Manager URLs** and add:
