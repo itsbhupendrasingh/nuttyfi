@@ -12,6 +12,7 @@ Make your **NuttyFi 2.0** boards first‑class citizens in the Arduino IDE via B
 > 2. **Tools → Board → Boards Manager…** → search **“NuttyFi”** → **Install**.
 > 3. Select **Tools → Board → NuttyFi2.0 Framework → NuttyFi 2.0 (ESP‑12E/12F)** and you’re set.
 
+To install the NuttyFi board in Arduino IDE, go through this step-by-step guide: https://www.nuttyengineer.com/nuttyfi-iot-board-in-arduino-ide/
 ---
 
 ## Quick links
