@@ -85,7 +85,6 @@ Adjust these in `boards.txt` if your production design differs.
 ### Minimal blink example
 
 ```cpp
-#include <Arduino.h>
 
 #ifndef LED_BUILTIN
 #define LED_BUILTIN D4 // adjust if your LED is on GPIO2
@@ -100,6 +99,33 @@ void loop(){
   delay(500);
 }
 ```
+
+### Minimal blink example
+
+```cpp
+int led = D4;         // Onboard LED is connected to D4 (GPIO2)
+int brightness = 0;   // Brightness level
+int fadeAmount = 5;   // How much to change the brightness each step
+
+void setup() {
+  pinMode(led, OUTPUT);
+}
+
+void loop() {
+  // Invert brightness since onboard LED is active LOW
+  analogWrite(led, 255 - brightness);
+
+  brightness = brightness + fadeAmount;
+
+  if (brightness <= 0 || brightness >= 255) {
+    fadeAmount = -fadeAmount;
+  }
+
+  delay(30);
+}
+
+```
+
 
 ---
 
