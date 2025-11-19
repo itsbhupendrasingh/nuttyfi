@@ -1,4 +1,4 @@
-# NuttyFi 2.0 — Arduino Boards Package for ESP8266 (SME Dehradun)
+# NuttyFi 2.0 — Arduino Boards Package for ESP8266 (by SME Dehradun)
 
 Make your **NuttyFi 2.0** boards first‑class citizens in the Arduino IDE via Boards Manager.
 
