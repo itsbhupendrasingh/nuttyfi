@@ -82,7 +82,7 @@ Adjust these in `boards.txt` if your production design differs.
 
 ## Getting started
 
-### Minimal blink example
+### Minimal blink example (inbuilt LED)
 
 ```cpp
 
@@ -100,7 +100,7 @@ void loop(){
 }
 ```
 
-### Minimal blink example
+### LED Fade example (inbuilt LED)
 
 ```cpp
 int led = D4;         // Onboard LED is connected to D4 (GPIO2)
