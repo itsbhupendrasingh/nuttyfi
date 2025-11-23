@@ -40,7 +40,7 @@ If you need the upstream ESP8266 platform docs, see: [https://arduino-esp8266.re
 
 ---
 
-- *default* variant: **[NuttyFi 2.0](https://www.nuttyengineer.com/product/nuttyfi-v2/)**
+- *Default* Variant: **[NuttyFi 2.0](https://www.nuttyengineer.com/product/nuttyfi-v2/)**
   
 
 ---
