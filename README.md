@@ -87,7 +87,7 @@ Adjust these in `boards.txt` if your production design differs.
 ```cpp
 
 #ifndef LED_BUILTIN
-#define LED_BUILTIN D4 // adjust if your LED is on GPIO2
+#define LED_BUILTIN D4 // LED is on GPIO2
 #endif
 
 void setup(){
