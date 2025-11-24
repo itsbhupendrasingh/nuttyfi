@@ -1,6 +1,7 @@
-# NuttyFi 2.0 — Arduino Boards Package for ESP8266 (by SME Dehradun)
+# NuttyFi 2.0 — Arduino Boards Package for NuttyFi (by SME Dehradun)
 
-Make your **NuttyFi 2.0** boards first‑class citizens in the Arduino IDE via Boards Manager.
+Make your **NuttyFi 2.0** boards first‑class citizens in the Arduino IDE via Boards Manager. 
+
 
 ## Install in Arduino IDE 2.x
 
@@ -17,6 +18,11 @@ To install the **NuttyFi** board in Arduino IDE, go through this [step-by-step g
 [nuttyfi-guide]: https://www.nuttyengineer.com/nuttyfi-iot-board-in-arduino-ide/
 
 ---
+
+## NuttyFi 2.0 Release
+
+[![Watch the NuttyFi Demo](https://img.youtube.com/vi/OaYvKC6TH1A/maxresdefault.jpg)](https://youtu.be/OaYvKC6TH1A)
+
 
 ## Quick links
 
@@ -42,6 +48,19 @@ If you need the upstream ESP8266 platform docs, see: [https://arduino-esp8266.re
 
 - *Default* Variant: **[NuttyFi 2.0](https://www.nuttyengineer.com/product/nuttyfi-v2/)**
   
+
+## Development Status
+
+### Latest Stable Release  
+[![GitHub release](https://img.shields.io/github/v/release/itsbhupendrasingh/nuttyfi)](https://github.com/itsbhupendrasingh/nuttyfi/releases/latest)  
+[![Release date](https://img.shields.io/github/release-date/itsbhupendrasingh/nuttyfi)](https://github.com/itsbhupendrasingh/nuttyfi/releases/latest)  
+[![Downloads @latest](https://img.shields.io/github/downloads/itsbhupendrasingh/nuttyfi/latest/total)](https://github.com/itsbhupendrasingh/nuttyfi/releases/latest)
+
+### Latest Development (Pre-release)  
+[![Dev release](https://img.shields.io/github/v/release/itsbhupendrasingh/nuttyfi?include_prereleases&label=dev%20release)](https://github.com/itsbhupendrasingh/nuttyfi/releases)  
+[![Dev release date](https://img.shields.io/github/release-date-pre/itsbhupendrasingh/nuttyfi?label=dev%20release%20date)](https://github.com/itsbhupendrasingh/nuttyfi/releases)  
+[![Dev downloads](https://img.shields.io/github/downloads-pre/itsbhupendrasingh/nuttyfi/latest/total?label=dev%20downloads)](https://github.com/itsbhupendrasingh/nuttyfi/releases)
+
 
 ---
 
