@@ -1,4 +1,4 @@
-# NuttyFi 2.0 — Arduino Boards Package for NuttyFi (by SME Dehradun)
+# NuttyFi 2.0 — Arduino Boards Package for NuttyFi ![Invented by SME Dehradun](https://img.shields.io/badge/Invented%20by-SME%20Dehradun-purple) ![Made in India](https://img.shields.io/badge/Made%20in-India-orange?style=flat&logo=india)
 
 Make your **NuttyFi 2.0** boards first‑class citizens in the Arduino IDE via Boards Manager. 
 ## Development Status
@@ -25,7 +25,9 @@ Make your **NuttyFi 2.0** boards first‑class citizens in the Arduino IDE via B
 ![Arduino IDE](https://img.shields.io/badge/Platform-Arduino%20IDE-blue?logo=arduino)
 ![PlatformIO](https://img.shields.io/badge/Platform-PlatformIO-orange?logo=platformio)
 ![Arduino CLI](https://img.shields.io/badge/Platform-Arduino%20CLI-green?logo=arduino)
-![Made in India](https://img.shields.io/badge/Made%20in-India-orange?style=flat&logo=india)
+![MicroPython](https://img.shields.io/badge/Platform-MicroPython-black?logo=micropython)
+
+
 
 
 
