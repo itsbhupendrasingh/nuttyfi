@@ -22,9 +22,11 @@ Make your **NuttyFi 2.0** boards first‑class citizens in the Arduino IDE via B
 ![Supported: NuttyFi V2](https://img.shields.io/badge/Supported-NuttyFi%20V2-blue)
 ![Supported: ESP8266](https://img.shields.io/badge/Supported-ESP8266-green)
 ![License](https://img.shields.io/github/license/itsbhupendrasingh/NuttyFiOTA)
-![Platform: Arduino](https://img.shields.io/badge/Platform-Arduino-orange)
-![Framework: ESP8266](https://img.shields.io/badge/Framework-ESP8266-blue)
+![Arduino IDE](https://img.shields.io/badge/Platform-Arduino%20IDE-blue?logo=arduino)
+![PlatformIO](https://img.shields.io/badge/Platform-PlatformIO-orange?logo=platformio)
+![Arduino CLI](https://img.shields.io/badge/Platform-Arduino%20CLI-green?logo=arduino)
 ![Made in India](https://img.shields.io/badge/Made%20in-India-orange?style=flat&logo=india)
+
 
 
 
