@@ -13,6 +13,20 @@ Make your **NuttyFi 2.0** boards first‑class citizens in the Arduino IDE via B
 [![Dev release date](https://img.shields.io/github/release-date-pre/itsbhupendrasingh/nuttyfi?label=dev%20release%20date)](https://github.com/itsbhupendrasingh/nuttyfi/releases)
 [![Dev downloads](https://img.shields.io/github/downloads-pre/itsbhupendrasingh/nuttyfi/latest/total?label=dev%20downloads)](https://github.com/itsbhupendrasingh/nuttyfi/releases)
 
+## Build & Test Status
+
+![Compilation Tests](https://img.shields.io/badge/Compilation%20Tests-passing-brightgreen)
+![Compilation Tests (Verbose)](https://img.shields.io/badge/Compilation%20Tests%20(Verbose)-passing-brightgreen)
+![External Libraries Test](https://img.shields.io/badge/External%20Libraries%20Test-passing-brightgreen)
+![Runtime Tests](https://img.shields.io/badge/Runtime%20Tests-failing-red)
+![Supported: NuttyFi V2](https://img.shields.io/badge/Supported-NuttyFi%20V2-blue)
+![Supported: ESP8266](https://img.shields.io/badge/Supported-ESP8266-green)
+![License](https://img.shields.io/github/license/itsbhupendrasingh/NuttyFiOTA)
+![Platform: Arduino](https://img.shields.io/badge/Platform-Arduino-orange)
+![Framework: ESP8266](https://img.shields.io/badge/Framework-ESP8266-blue)
+![Made in India](https://img.shields.io/badge/Made%20in-India-orange?style=flat&logo=india)
+
+
 
 ## Install in Arduino IDE 2.x
 
