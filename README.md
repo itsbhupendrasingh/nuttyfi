@@ -1,12 +1,4 @@
 # NuttyFi 2.0 — Arduino Boards Package for NuttyFi  
-[![NuttyFi 2.0](https://img.shields.io/badge/NuttyFi%202.0-Arduino%20Boards%20Package-6f42c1?style=for-the-badge)](https://www.nuttyengineer.com/product/nuttyfi-v2/)
-
-<p align="left">
-  <img src="https://www.smedehradun.com/wp-content/uploads/2020/07/cropped-SME-origional-logo.png"
-       alt="SME Dehradun" height="20" />
-  <img src="https://img.shields.io/badge/Invented%20by-SME%20Dehradun-800080" alt="Invented by SME Dehradun" />
-  <img src="https://img.shields.io/badge/Made%20in-India-orange" alt="Made in India" />
-</p>
 
 <p align="left">
   <a href="https://www.nuttyengineer.com/product/nuttyfi-v2/">
