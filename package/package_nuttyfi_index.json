@@ -16,8 +16,8 @@
                "version": "1.0.0-dev",
                "architecture": "esp8266",
                "archiveFileName": "nuttyfi-1.0.0-dev.zip",
-               "checksum": "SHA-256:792E41C3F2E8915E09228EDFA38C24027B80FA519E16E61C486B38B3BFD5C124",
-               "size": "39199939", 
+               "checksum": "SHA-256:1B1410DC144D8EDEEAD686D435E50FA846E78F04590CA0D001202E511D06C3A0",
+               "size": "39199929", 
                "boards": [ 
                   {
                      "name": "NuttyFi 2.0(ESP-12E Module)"
