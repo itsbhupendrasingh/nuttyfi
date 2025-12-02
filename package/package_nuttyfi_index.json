@@ -11,7 +11,7 @@
          "platforms": [
             {
                "category": "NuttyFi2.0",
-               "name": "NuttyFi2.0 Framework",
+               "name": "NuttyFi2.0",
                "url": "https://github.com/itsbhupendrasingh/nuttyfi/releases/download/v1.0.0/nuttyfi-1.0.0-dev.zip",
                "version": "1.0.0-dev",
                "architecture": "esp8266",
@@ -20,7 +20,7 @@
                "size": "39199929", 
                "boards": [ 
                   {
-                     "name": "NuttyFi 2.0(ESP-12E Module)"
+                     "name": "NuttyFi 2.0"
                   }
                ],
                "toolsDependencies": [
