@@ -16,11 +16,11 @@
                "version": "1.0.1",
                "architecture": "esp8266",
                "archiveFileName": "nuttyfi-1.0.1.zip",
-               "checksum": "SHA-256:F3CA8A20D75F57863BC5D49201F46208815AA59A6D468D4838853695949AD8D2",
-               "size": "39016578",
+               "checksum": "SHA-256:98E488C76C548869DDDDF97DBFCF88B09837571725D349A3CCB6D838598820EE",
+               "size": "38972159",
                "boards": [
                   {
-                     "name": "NuttyFi 2.0"
+                     "name": "NuttyFi"
                   }
                ],
                "toolsDependencies": [
