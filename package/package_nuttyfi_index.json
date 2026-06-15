@@ -12,13 +12,53 @@
             {
                "category": "NuttyFi2.0",
                "name": "NuttyFi2.0",
-               "url": "https://github.com/itsbhupendrasingh/nuttyfi/releases/download/v1.0.0/nuttyfi-1.0.0-dev.zip",
-               "version": "1.0.0-dev",
+               "url": "https://github.com/itsbhupendrasingh/nuttyfi/releases/download/v1.0.1/nuttyfi-1.0.1.zip",
+               "version": "1.0.1",
                "architecture": "esp8266",
-               "archiveFileName": "nuttyfi-1.0.0-dev.zip",
-               "checksum": "SHA-256:1B1410DC144D8EDEEAD686D435E50FA846E78F04590CA0D001202E511D06C3A0",
-               "size": "39199929", 
-               "boards": [ 
+               "archiveFileName": "nuttyfi-1.0.1.zip",
+               "checksum": "SHA-256:F3CA8A20D75F57863BC5D49201F46208815AA59A6D468D4838853695949AD8D2",
+               "size": "39016578",
+               "boards": [
+                  {
+                     "name": "NuttyFi 2.0"
+                  }
+               ],
+               "toolsDependencies": [
+                  {
+                     "packager": "nuttyfi",
+                     "version": "3.2.0-gcc10.3-c791b74",
+                     "name": "xtensa-lx106-elf-gcc"
+                  },
+                  {
+                     "packager": "nuttyfi",
+                     "version": "3.2.0-gcc10.3-c791b74",
+                     "name": "mkspiffs"
+                  },
+                  {
+                     "packager": "nuttyfi",
+                     "version": "3.2.0-gcc10.3-c791b74",
+                     "name": "mklittlefs"
+                  },
+                  {
+                     "packager": "nuttyfi",
+                     "version": "3.7.2-post2",
+                     "name": "python3"
+                  }
+               ],
+               "help": {
+                  "online": "https://github.com/itsbhupendrasingh/nuttyfi"
+               }
+            },
+            {
+               "category": "NuttyFi2.0",
+               "name": "NuttyFi2.0",
+               "url": "https://github.com/itsbhupendrasingh/nuttyfi/releases/download/v1.0.0/nuttyfi-1.0.0.zip",
+               "version": "1.0.0",
+               "architecture": "esp8266",
+               "archiveFileName": "nuttyfi-1.0.0.zip",
+               "checksum": "SHA-256:113B799753F9E0F3AD6513B770F313E12698996033676EB7CCF08AE6997A39A0",
+               "size": "38972237",
+               "boards": [
                   {
                      "name": "NuttyFi 2.0"
                   }
