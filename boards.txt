@@ -30,7 +30,7 @@ menu.mmu=MMU
 menu.non32xfer=Non-32-Bit Access
 
 ##############################################################
-nodemcuv2.name=NuttyFi
+nodemcuv2.name=NuttyFi2.0
 nodemcuv2.build.board=ESP8266_NODEMCU_ESP12E
 nodemcuv2.build.variant=nodemcu
 nodemcuv2.upload.tool=esptool
